@@ -6,6 +6,38 @@
 
 > A Docker image with various network tools pre-installed.
 
+
+
+## Build Docker Image
+
+// 建立映像檔
+docker build --platform linux/amd64 --rm -t docker-network-tools .
+
+// 映像檔建立 refernece
+docker tag docker-network-tools rockexe0000/docker-network-tools
+
+// 映像檔推送到 docker hub
+docker image push rockexe0000/docker-network-tools
+
+// 啟動容器
+docker container run -d -p 80:8080 rockexe0000/docker-network-tools
+
+
+```
+curl --location 'localhost/exec' \
+--header 'Content-Type: text/plain' \
+--data 'pwd'
+
+curl --location 'localhost/reqinfo' \
+--header 'Content-Type: text/plain'
+
+```
+ref:
+https://medium.com/@kolban1/shell-exec-with-cloud-run-fbc6d299f6d4
+
+
+
+
 ## Usage
 
 To launch a Bash session in your terminal:
